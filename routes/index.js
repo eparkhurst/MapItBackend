@@ -4,10 +4,10 @@ var knex = require('../db/knex');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  return knex.select().table('users')
-  .then(function(results){
+  // return knex.select().table('users')
+  // .then(function(results){
     res.send("It's up")
-  })
+  // })
 });
 
 router.get('/maps/:id', function(req, res, next) {
