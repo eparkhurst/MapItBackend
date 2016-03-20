@@ -6,7 +6,7 @@ var knex = require('../db/knex');
 router.get('/', function(req, res, next) {
   return knex.select().table('users')
   .then(function(results){
-    res.send(results)
+    res.send("It's up")
   })
 });
 
