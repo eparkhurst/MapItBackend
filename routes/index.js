@@ -32,7 +32,7 @@ router.post('/newuser', function(req, res){
 })
 
 router.post('/newmap', function(req,res){
-  console.log(req);
+  console.log(req.body);
   return knex('maps').returning('id').insert({
     title:req.body.title,
     note:req.body.note,
