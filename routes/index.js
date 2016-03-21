@@ -47,6 +47,19 @@ router.post('/newmap', function(req,res){
     })
   })
 })
+
+router.delete('/deletemap/:id', function(req, res){
+  return knex('maps').where('id', req.params.id).del()
+  .then(function(results){
+    res.json(results)
+    return results;
+  })
+  .catch(function(err){
+    console.log('Oh NO');
+    res.json(err);
+  })
+})
+
 module.exports = router;
 
 
